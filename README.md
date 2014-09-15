@@ -1,6 +1,10 @@
 ECE382_Lab02
 ============
 
+##PreLab
+####Diagram
+
+####Psuedo-Code
 ```C
 void main(){
     0x0-0x100 (or something) = encrypted bytes;
