@@ -3,7 +3,7 @@ ECE382_Lab02
 
 ##PreLab
 ####Diagram
-
+![alt tag](https://raw.githubusercontent.com/EricWardner/ECE382_Lab02/master/lab2flow.png)
 ####Psuedo-Code
 ```C
 void main(){
