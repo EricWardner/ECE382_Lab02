@@ -49,7 +49,7 @@ void decryptByte(byte MsgByte){
 ####Design Process
 After creating a good psuedo-code the design process was fairly straight forward. The hardest part was knowing the right syntax for constants and pointers. 
 
-#####Initialization
+######Initialization
 The irst part of the program was to initialize the cipher text, the length, the key, the key length, and a pointer to where you would like the result to be stored
 
 ```asm
@@ -98,4 +98,10 @@ nextByte	mov.b	@r6+, r12		;put byte of message into r12
 
 end
             ret
+```
+######decryptByte
+Gets r12 (the message byte) and r13 (byte of key) passed into to by reference. It then xor's the message with the key, effectively decrypting it. Then it returns.
+```asm
+xor.b	r12, r13
+ret
 ```
