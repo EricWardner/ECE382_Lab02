@@ -121,3 +121,6 @@ Build attempt 3: (success) program ran and worked with the varying key length an
 
 ####Conclusions and Lessons learned
 It was honestly way easier to just start coding in assembley and stepping through than writing and making a flowchart first. I found with such a simple program I never even referenced my original pseudo code or flowchart. I'm learning to always look for little mistakes in code and syntax before completely changing my program. Overall I though the lab was successfull, It only took 3 tries and some simple mistakes to get the program fully functional
+
+####Documentation
+I referenced C2C bodin and C2C Righter's lab report in an attempt to gt the proper layout and content into mine.
