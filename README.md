@@ -73,6 +73,8 @@ call    #decryptMessage
 forever:    jmp     forever
 ```
 ######decryptMessage
+The decryptMessage subroutine had to parse through the given ciphertext stored in ROM using a pointer (r6) and pass each byte into decryptByte via r12, it also handles a key of varying length in the same manner. After decryptByte has returned, the decrypted byte is stored in RAM. 
+
 ```asm
 decryptMessage:
 
