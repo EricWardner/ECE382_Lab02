@@ -61,6 +61,7 @@ KEY_LEN:	.equ	0x03
 RESULT:		.equ	0x200
 ```
 ######Main loop
+The main loop initializes the constants into a register for use an manipulaiton by the program, it also calls the decryptMessage subroutine.
 ```asm
 mov.w	#cipherTxt, r6
 mov.w	#key, r7
@@ -70,4 +71,29 @@ mov.w	#KEY_LEN, r10
 call    #decryptMessage
 
 forever:    jmp     forever
+```
+######decryptMessage
+```asm
+decryptMessage:
+
+nextByte	mov.b	@r6+, r12		;put byte of message into r12
+			dec.b	r9
+			mov.b	@r7+, r13		;put byte of key into r13
+			dec.b	r10
+
+			tst		r9
+			jz		end
+			call	#decryptCharacter
+
+			mov.b	r13, 0(r8)		;store result
+			inc.w	r8
+
+			tst		r10
+			jnz		nextByte
+			mov.w	#KEY_LEN, r10
+			mov.w	#key, r7
+			jmp		nextByte
+
+end
+            ret
 ```
