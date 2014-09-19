@@ -62,12 +62,12 @@ RESULT:		.equ	0x200
 ```
 ######Main loop
 ```asm
- mov.w	    #cipherTxt, r6
-            mov.w	#key, r7
-            mov.w	#RESULT, r8
-			mov.w	#MSG_LEN, r9
-			mov.w	#KEY_LEN, r10
-            call    #decryptMessage
+mov.w	#cipherTxt, r6
+mov.w	#key, r7
+mov.w	#RESULT, r8
+mov.w	#MSG_LEN, r9
+mov.w	#KEY_LEN, r10
+call    #decryptMessage
 
 forever:    jmp     forever
 ```
